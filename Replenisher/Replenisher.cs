@@ -12,7 +12,7 @@ namespace Replenisher
     [ApiVersion(2, 1)]
     public class Replenisher : TerrariaPlugin
     {
-        public override Version Version => new Version(1, 2, 4);
+        public override Version Version => new Version(1, 2, 5);
         public override string Name => "Replenisher";
         public override string Author => "omni & Soofa";
         public override string Description => "Replenish your world's resources!";
@@ -194,7 +194,7 @@ namespace Replenisher
                                     bool found = false;
                                     foreach (Item itm in Main.chest[x].item)
                                     {
-                                        if (itm.netID != 0)
+                                        if (itm.type != 0)
                                         {
                                             found = true;
                                         }
